@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"  // or "mysql", "sqlite", etc.
+  url      = env("DATABASE_URL")
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  token     String   @unique
+  userId    String   @map("user_id")
+  user      User     @relation(fields: [userId], references: [id])
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  revokedAt DateTime? 
+
+  @@map("refresh_tokens")
+}
+
+model User {
+  id        String   @id @default(uuid())
+  name      String
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  tokens    RefreshToken[]
+  transactions  Transaction[]
+
+  @@map("users")
+}
+
+model Transaction {
+  id                String    @id @default(uuid())
+  date              DateTime  
+  quantity          Float
+  feeCents          Int       @map("fee_cents")
+  cryptoPriceCents  Int       @map("crypto_price_cents")
+  cryptoCurrency    String    @map("crypto_currency")
+  userId            String    @map("user_id")
+  user              User      @relation(fields: [userId], references: [id])
+
+  @@map("transactions")
+}
