@@ -1,8 +1,8 @@
 import { injectable, inject } from 'inversify';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { TYPES } from '@/container/types';
-import { IUserRepository } from '@/domain/repositories/user-repository';
+import { TYPES } from '../../../container/types';
+import { IUserRepository } from '../../../domain/repositories/user-repository';
 
 @injectable()
 export class LoginUserUseCase {

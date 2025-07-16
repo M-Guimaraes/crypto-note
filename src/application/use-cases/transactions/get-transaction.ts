@@ -1,7 +1,7 @@
 import { inject, injectable } from 'inversify';
-import { TYPES } from '@/container/types';
-import { ITransactionRepository } from '@/domain/repositories/transaction-repository';
-import { Transaction } from '@/domain/entities/transaction';
+import { TYPES } from '../../../container/types';
+import { ITransactionRepository } from '../../../domain/repositories/transaction-repository';
+import { Transaction } from '../../../domain/entities/transaction';
 
 interface GetTransactionRequest {
   transactionId: string;

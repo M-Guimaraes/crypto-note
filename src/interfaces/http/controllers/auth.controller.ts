@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
 import { inject, injectable } from 'inversify';
 
-import { TYPES } from '@/container/types';
-import { DeleteUserUseCase } from '@/application/use-cases/users/delete-user';
-import { LoginUserUseCase } from '@/application/use-cases/users/login-user';
-import { LogoutUserUseCase } from '@/application/use-cases/users/logout-user';
-import { RegisterUserUseCase } from '@/application/use-cases/users/register-user';
-import { RefreshTokenUseCase } from '@/application/use-cases/users/refresh-token';
+import { TYPES } from '../../../container/types';
+import { DeleteUserUseCase } from '../../../application/use-cases/users/delete-user';
+import { LoginUserUseCase } from '../../../application/use-cases/users/login-user';
+import { LogoutUserUseCase } from '../../../application/use-cases/users/logout-user';
+import { RegisterUserUseCase } from '../../../application/use-cases/users/register-user';
+import { RefreshTokenUseCase } from '../../../application/use-cases/users/refresh-token';
 
 @injectable()
 export class AuthController {

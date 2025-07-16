@@ -1,8 +1,8 @@
-import { IUserRepository } from '@/domain/repositories/user-repository';
-import { prisma } from '../prisma/client';
-
 import { injectable } from 'inversify';
-import { User } from '@/domain/entities/user';
+
+import { IUserRepository } from '../../../domain/repositories/user-repository';
+import { prisma } from '../prisma/client';
+import { User } from '../../../domain/entities/user';
 
 @injectable()
 export class UserRepository implements IUserRepository {

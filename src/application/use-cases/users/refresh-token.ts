@@ -1,6 +1,6 @@
-import { TYPES } from '@/container/types';
-import { IUserRepository } from '@/domain/repositories/user-repository';
-import { AppError } from '@/interfaces/http/middlewares/error-handler';
+import { TYPES } from '../../../container/types';
+import { IUserRepository } from '../../../domain/repositories/user-repository';
+import { AppError } from '../../../interfaces/http/middlewares/error-handler';
 import { inject, injectable } from 'inversify';
 import jwt from 'jsonwebtoken';
 

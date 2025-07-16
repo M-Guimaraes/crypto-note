@@ -1,7 +1,7 @@
 import { prisma } from './client';
 
-import { ITransactionRepository } from '@/domain/repositories/transaction-repository';
-import { Transaction } from '@/domain/entities/transaction';
+import { ITransactionRepository } from '../../../domain/repositories/transaction-repository';
+import { Transaction } from '../../../domain/entities/transaction';
 
 export class TransactionRepository implements ITransactionRepository {
   async create(transaction: Transaction, userId: string): Promise<Transaction> {

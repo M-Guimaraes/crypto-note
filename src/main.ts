@@ -3,10 +3,10 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import rateLimit from 'express-rate-limit';
 
-import transactionRoutes from '@/interfaces/http/routes/transaction.route';
-import authRoutes from '@/interfaces/http/routes/auth.route';
+import transactionRoutes from './interfaces/http/routes/transaction.route';
+import authRoutes from './interfaces/http/routes/auth.route';
 
-import { errorHandler } from '@/interfaces/http/middlewares/error-handler';
+import { errorHandler } from './interfaces/http/middlewares/error-handler';
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes

@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify';
-import { TYPES } from '@/container/types';
-import { ITransactionRepository } from '@/domain/repositories/transaction-repository';
+import { TYPES } from '../../../container/types';
+import { ITransactionRepository } from '../../../domain/repositories/transaction-repository';
 
 @injectable()
 export class DeleteTransactionUseCase {

@@ -1,12 +1,12 @@
-import { request, Request, Response } from 'express';
+import { Request, Response } from 'express';
 import { inject, injectable } from 'inversify';
 
-import { TYPES } from '@/container/types';
+import { TYPES } from '../../../container/types';
 
-import { CreateTransactionUseCase } from '@/application/use-cases/transactions/create-transaction';
-import { ListTransactionUseCase } from '@/application/use-cases/transactions/list-transaction';
-import { GetTransactionUseCase } from '@/application/use-cases/transactions/get-transaction';
-import { DeleteTransactionUseCase } from '@/application/use-cases/transactions/delete-transaction';
+import { CreateTransactionUseCase } from '../../../application/use-cases/transactions/create-transaction';
+import { ListTransactionUseCase } from '../../../application/use-cases/transactions/list-transaction';
+import { GetTransactionUseCase } from '../../../application/use-cases/transactions/get-transaction';
+import { DeleteTransactionUseCase } from '../../../application/use-cases/transactions/delete-transaction';
 
 @injectable()
 export class TransactionController {

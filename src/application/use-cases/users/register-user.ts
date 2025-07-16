@@ -1,10 +1,10 @@
 import { inject, injectable } from 'inversify';
 import bcrypt from 'bcrypt';
 
-import { TYPES } from '@/container/types';
-import { IUserRepository } from '@/domain/repositories/user-repository';
-import { User } from '@/domain/entities/user';
-import { AppError } from '@/interfaces/http/middlewares/error-handler';
+import { TYPES } from '../../../container/types';
+import { IUserRepository } from '../../../domain/repositories/user-repository';
+import { User } from '../../../domain/entities/user';
+import { AppError } from '../../../interfaces/http/middlewares/error-handler';
 
 interface CreateUserRequest {
   email: string;

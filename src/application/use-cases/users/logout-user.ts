@@ -1,6 +1,6 @@
-import { TYPES } from '@/container/types';
-import { IUserRepository } from '@/domain/repositories/user-repository';
-import { AppError } from '@/interfaces/http/middlewares/error-handler';
+import { TYPES } from '../../../container/types';
+import { IUserRepository } from '../../..//domain/repositories/user-repository';
+import { AppError } from '../../../interfaces/http/middlewares/error-handler';
 import { injectable, inject } from 'inversify';
 
 @injectable()
